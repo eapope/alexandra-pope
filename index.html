@@ -46,37 +46,45 @@
             padding-bottom: 2px;
         }
 
+        /* ── Hero Header with Background Image ── */
+        .profile-hero {
+            width: 100%;
+            min-height: 380px;
+            background-image: url('images/stephans-quintet-miri.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+        }
+        .profile-hero-text {
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.0) 100%);
+            padding: 2.5rem 2rem 1.5rem;
+            text-align: left;
+        }
+        .profile-hero-text h1 {
+            font-size: 2.2rem;
+            font-weight: normal;
+            color: #fff;
+            margin-bottom: 0.3rem;
+        }
+        .profile-hero-text p {
+            font-size: 1rem;
+            color: #ddd;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .img-credit {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 0.5rem;
+        }
+
         /* ── Page Wrapper ── */
         .page-wrapper {
             max-width: 860px;
             margin: 0 auto;
             padding: 3rem 2rem 4rem;
-        }
-
-        /* ── Profile Header ── */
-        .profile-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        .profile-header img {
-            width: 100%;
-            max-height: 380px;
-            object-fit: cover;
-            object-position: center;
-            display: block;
-            margin: 0 auto 1.5rem;
-            border-radius: 4px;
-        }
-        .profile-header h1 {
-            font-size: 2rem;
-            font-weight: normal;
-            margin-bottom: 0.3rem;
-            color: #222;
-        }
-        .profile-header p {
-            font-size: 1rem;
-            color: #666;
-            font-family: Arial, Helvetica, sans-serif;
         }
 
         /* ── Bio Section ── */
@@ -175,16 +183,6 @@
             border-top: 1px solid #eee;
             margin-top: 4rem;
         }
-
-        /* ── Image Caption ── */
-        .img-caption {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.75rem;
-            color: #aaa;
-            text-align: center;
-            margin-top: -1rem;
-            margin-bottom: 1.5rem;
-        }
     </style>
 </head>
 <body>
@@ -201,22 +199,20 @@
         </ul>
     </nav>
 
-    <!-- ── Main Content ── -->
-    <div class="page-wrapper">
-
-        <!-- Profile Header -->
-        <div class="profile-header">
-            <img
-                src="images/stephans-quintet-miri.png"
-                alt="Stephan's Quintet captured by the James Webb Space Telescope MIRI instrument – NASA/ESA/CSA"
-            />
-            <p class="img-caption">
-                Stephan's Quintet (MIRI Image) &mdash; NASA/ESA/CSA, James Webb Space Telescope
-            </p>
+    <!-- ── Hero (full width, outside page-wrapper) ── -->
+    <div class="profile-hero">
+        <div class="profile-hero-text">
             <h1>Alexandra Pope</h1>
             <p>Professor</p>
             <p>University of Massachusetts Amherst</p>
+            <p class="img-credit">
+                Stephan's Quintet (MIRI Image) &mdash; NASA/ESA/CSA, James Webb Space Telescope
+            </p>
         </div>
+    </div>
+
+    <!-- ── Main Content ── -->
+    <div class="page-wrapper">
 
         <!-- Bio -->
         <div class="bio">
